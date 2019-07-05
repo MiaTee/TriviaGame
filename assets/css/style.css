@@ -1,0 +1,11 @@
+body {
+  background-color: gray;
+  background-image: url("paper.gif");
+}
+.banner-div {
+  background-image: url("assets/images/trivia.jpg");
+  height: 300px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
