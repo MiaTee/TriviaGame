@@ -57,3 +57,8 @@ body {
 p {
   text-align: center;
 }
+.timer {
+  text-align: center;
+  font-family: "Black Ops One", cursive;
+  font-size: 64px;
+}

@@ -4,11 +4,19 @@ var unansweredQuestions = 5;
 
 $(document).ready(function() {
   //gameTimer();
+  $(".timer").hide();
   $(".button-div").click(function() {
     $(".trivia-questions").show();
     $(".button-div").hide();
     $(".user-done-button").show();
+    $(".timer").show();
     console.log("I have been clicked!");
+    var timeleft = 10;
+    var downloadTimer = setInterval(function() {
+      timeleft--;
+      document.getElementById("countdowntimer").textContent = timeleft;
+      if (timeleft <= 0) clearInterval(downloadTimer);
+    }, 1000);
   });
   $(".user-done-button").click(function() {
     $(".game-status").show();
@@ -114,17 +122,3 @@ function gameOver(a, b, c) {
   console.log("Uncorrect Answers:" + wrongAnswers);
   console.log("Unaswered Questions:" + unansweredQuestions);
 }
-// var gameStatus = setTimeout(() => {
-//   gameOver(correctAnswers, wrongAnswers, unansweredQuestions);
-// }, 0);
-// function gameTimer() {
-//   var counter = 15;
-//   var newcounter = counter - 1;
-//   // Display 'counter' wherever you want to display it.
-//   if (counter === 0) {
-//     gameOver();
-//   }
-//   setInterval(function() {
-//     $(".game-timer").text(counter - newcounter + "Seconds");
-//   }, 1000);
-// }
