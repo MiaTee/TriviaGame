@@ -4,6 +4,7 @@ var unansweredQuestions = 5;
 
 $(document).ready(function() {
   //gameTimer();
+  var downloadTimer;
   $(".timer").hide();
   $(".button-div").click(function() {
     $(".trivia-questions").show();
@@ -12,10 +13,19 @@ $(document).ready(function() {
     $(".timer").show();
     console.log("I have been clicked!");
     var timeleft = 10;
-    var downloadTimer = setInterval(function() {
+    downloadTimer = setInterval(function() {
       timeleft--;
       document.getElementById("countdowntimer").textContent = timeleft;
-      if (timeleft <= 0) clearInterval(downloadTimer);
+      if (timeleft <= 0) {
+        clearInterval(downloadTimer);
+        if (timeleft === 0) {
+          $(".timer").hide();
+          $(".trivia-questions").hide();
+          $(".user-done-button").hide();
+          $(".game-status").show();
+          gameOver();
+        }
+      }
     }, 1000);
   });
   $(".user-done-button").click(function() {
@@ -24,6 +34,8 @@ $(document).ready(function() {
     $(".button-div").hide();
     $(".user-done-button").hide();
     gameOver();
+    clearInterval(downloadTimer);
+    $(".timer").hide();
     //gameOver(correctInput, wrongInput, noInput);
   });
   $(".go-back-button-div").click(function() {

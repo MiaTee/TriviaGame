@@ -34,9 +34,10 @@ body {
 .user-done-button {
   display: none;
   width: 25%;
-  text-align: center;
+
   font-family: "Finger Paint";
   font-size: 22px;
+  margin: 0 auto;
 }
 .game-status {
   display: none;
@@ -49,10 +50,10 @@ body {
   position: absolute;
   right: 50%;
   bottom: 0;
-  text-align: center;
   padding: 60px;
   font-family: "Finger Paint";
   font-size: 22px;
+  margin: 0 auto;
 }
 p {
   text-align: center;
