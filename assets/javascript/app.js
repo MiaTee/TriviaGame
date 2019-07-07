@@ -3,6 +3,7 @@ var wrongAnswers = 0;
 var unansweredQuestions = 5;
 
 $(document).ready(function() {
+  //gameTimer();
   $(".button-div").click(function() {
     $(".trivia-questions").show();
     $(".button-div").hide();
@@ -116,3 +117,14 @@ function gameOver(a, b, c) {
 // var gameStatus = setTimeout(() => {
 //   gameOver(correctAnswers, wrongAnswers, unansweredQuestions);
 // }, 0);
+// function gameTimer() {
+//   var counter = 15;
+//   var newcounter = counter - 1;
+//   // Display 'counter' wherever you want to display it.
+//   if (counter === 0) {
+//     gameOver();
+//   }
+//   setInterval(function() {
+//     $(".game-timer").text(counter - newcounter + "Seconds");
+//   }, 1000);
+// }
