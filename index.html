@@ -4,9 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"
+    />
+    
+
     <script src="jquery-1.12.4.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <title>Trivia Game</title>
   </head>
   <body>
@@ -14,62 +26,82 @@
       <img src="assets/images/trivia.jpg" />
     </div>
 
-    <div class="timer-div"></div>
-    <div>
-      <div class="questionOne">
-        <h3>
-          What French pastry is made with choux dough, filled with a cream and
-          topped with icing?
-        </h3>
-        <input type="radio" name="answers" value="Éclair" /> Éclair
-        <input type="radio" name="answers" value="Millefeuille" /> Millefeuille
-        <input type="radio" name="answers" value="Viennoiserie" /> Viennoiserie
-      </div>
-      <div class="questionTwo">
-        <h3>
-          In the American sitcom ALF, Gordon Shumway crashes his spacecraft into
-          the garage of which family?
-        </h3>
-        <input type="radio" name="answers" value="The Jackson Family" /> The
-        Jackson Family
-        <input type="radio" name="answers" value="The Tanner Family" /> The
-        Tanner Family
-        <input type="radio" name="answers" value=" The Simpsons" /> The Simpsons
-      </div>
-
-      <div class="questionThree">
-        <h3>
-          Ficus carica is the scientific name for which Asian species of
-          flowering plant in the mulberry family?
-        </h3>
-        <input type="radio" name="answers" value="Common fig" />Common fig
-        <input
-          type="radio"
-          name="answers"
-          value="Lamprocapnos spectabilis"
-        />Lamprocapnos spectabilis
-        <input type="radio" name="answers" value="Angiosperms" />Angiosperms
-      </div>
-
-      <div class="questionFour">
-        <h3>
-          The Importance of Being Earnest is a play written by which Irish poet
-          and playwright?
-        </h3>
-        <input type="radio" name="answers" value="Oscar Wilde" />Oscar Wilde
-        <input type="radio" name="answers" value="John Montague" />John Montague
-        <input type="radio" name="answers" value="Austin Clarke" />Austin Clarke
-      </div>
-      <div class="questionFive">
-        <h3>
-          What American singer, songwriter and poet was also known as “The
-          Lizard King”?
-        </h3>
-        <input type="radio" name="answers" value="Jim Morrison" />Jim Morrison
-        <input type="radio" name="answers" value="David Foster" />David Foster
-        <input type="radio" name="answers" value="Trent Reznor" />Trent Reznor
-      </div>
+    <div class="button-div">
+      <button type="button" class="btn btn-primary btn-lg">
+        Start Playing!
+      </button>
     </div>
+   
+    <div class="trivia-questions">
+            <div class="questionOne">
+              <h3>
+                What French pastry is made with choux dough, filled with a cream and
+                topped with icing?
+              </h3>
+              <input type="radio" name="answers1" value=" Éclair " /> Éclair
+              <input type="radio" name="answers1" value=" Millefeuille " /> Millefeuille
+              <input type="radio" name="answers1" value=" Viennoiserie " /> Viennoiserie
+            </div>
+            <div class="questionTwo">
+              <h3>
+                In the American sitcom ALF, Gordon Shumway crashes his spacecraft into
+                the garage of which family?
+              </h3>
+              <input type="radio" name="answers2" value=" The Jackson Family " /> The
+              Jackson Family
+              <input type="radio" name="answers2" value=" The Tanner Family " /> The
+              Tanner Family
+              <input type="radio" name="answers2" value=" The Simpsons " /> The Simpsons
+            </div>
+      
+            <div class="questionThree">
+              <h3>
+                Ficus carica is the scientific name for which Asian species of
+                flowering plant in the mulberry family?
+              </h3>
+              <input type="radio" name="answers3" value=" Common fig " /> Common fig
+              <input
+                type="radio"
+                name="answers3"
+                value=" Lamprocapnos spectabilis "
+              /> Lamprocapnos spectabilis
+              <input type="radio" name="answers3" value=" Angiosperms " /> Angiosperms
+            </div>
+      
+            <div class="questionFour">
+              <h3>
+                The Importance of Being Earnest is a play written by which Irish poet
+                and playwright?
+              </h3>
+              <input type="radio" name="answers4" value=" Oscar Wilde " /> Oscar Wilde
+              <input type="radio" name="answers4" value=" John Montague " /> John Montague
+              <input type="radio" name="answers4" value=" Austin Clarke " /> Austin Clarke
+            </div>
+            <div class="questionFive">
+              <h3>
+                What American singer, songwriter and poet was also known as “The
+                Lizard King”?
+              </h3>
+              <input type="radio" name="answers5" value=" Jim Morrison " /> Jim Morrison
+              <input type="radio" name="answers5" value=" David Foster " /> David Foster
+              <input type="radio" name="answers5" value=" Trent Reznor " /> Trent Reznor
+            </div>
+          </div>
+            <div class="user-done-button">
+                    <button type="button" class="btn btn-primary btn-lg">
+                            Done
+                          </button>
+            </div>
+        </div>
+        <div class="game-status">
+                <p>ALL DONE!!</p>
+
+                <div class="go-back-button-div">
+                        <button type="button" class="btn btn-primary btn-lg">
+                          Play Again
+                        </button>
+                      </div>
+              </div>
 
     <script type="text/javascript" src="assets/javascript/app.js"></script>
   </body>

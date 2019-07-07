@@ -1,11 +1,59 @@
 body {
   background-color: gray;
   background-image: url("paper.gif");
+  font-family: "Finger Paint";
+  font-size: 22px;
 }
 .banner-div {
   background-image: url("assets/images/trivia.jpg");
-  height: 300px;
-  width: 100%;
+  display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 60%;
+  padding: 20px 50px 20px;
+  text-align: center;
+}
+.button {
+  width: 25%;
+  position: absolute;
+  top: 50%;
+  font-family: "Finger Paint";
+  font-size: 22px;
+}
+.button-div {
+  text-align: center;
+  font-family: "Finger Paint";
+  font-size: 22px;
+}
+.trivia-questions {
+  display: none;
+  text-align: center;
+  font-family: "Finger Paint";
+  font-size: 22px;
+}
+.user-done-button {
+  display: none;
+  width: 25%;
+  text-align: center;
+  font-family: "Finger Paint";
+  font-size: 22px;
+}
+.game-status {
+  display: none;
+  text-align: center;
+  font-family: "Finger Paint";
+  font-size: 22px;
+}
+.go-back-button-div {
+  width: 25%;
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  text-align: center;
+  padding: 60px;
+  font-family: "Finger Paint";
+  font-size: 22px;
+}
+p {
+  text-align: center;
 }

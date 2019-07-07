@@ -1,10 +1,28 @@
 var correctAnswers = 0;
 var wrongAnswers = 0;
 var unansweredQuestions = 5;
+
 $(document).ready(function() {
+  $(".button-div").click(function() {
+    $(".trivia-questions").show();
+    $(".button-div").hide();
+    $(".user-done-button").show();
+    console.log("I have been clicked!");
+  });
+  $(".user-done-button").click(function() {
+    $(".game-status").show();
+    $(".trivia-questions").hide();
+    $(".button-div").hide();
+    $(".user-done-button").hide();
+    gameOver();
+    //gameOver(correctInput, wrongInput, noInput);
+  });
+  $(".go-back-button-div").click(function() {
+    location.reload();
+  });
   $('.questionOne input[type="radio"]').click(function() {
     unansweredQuestions = unansweredQuestions - 1;
-    console.log(unansweredQuestions);
+    console.log("Unanswered Questions:" + unansweredQuestions);
 
     //this is how to check if button was checked
     //$('input:radio[name=questionOne]')[0].checked = true;
@@ -75,11 +93,26 @@ $(document).ready(function() {
     }
   });
 });
-function gameOver(correctInput, wrongInput, noInput) {
+function gameOver(a, b, c) {
+  $(".game-status").append(
+    "<p>" +
+      "Correct Answers:" +
+      correctAnswers +
+      "</p>" +
+      "<p>" +
+      "Uncorrect Answers:" +
+      wrongAnswers +
+      "</p>" +
+      "<p>" +
+      "Unaswered Questions:" +
+      unansweredQuestions +
+      "</p>"
+  );
+
   console.log("Correct Answers:" + correctAnswers);
   console.log("Uncorrect Answers:" + wrongAnswers);
   console.log("Unaswered Questions:" + unansweredQuestions);
 }
-var gameStatus = setTimeout(() => {
-  gameOver(correctAnswers, wrongAnswers, unansweredQuestions);
-}, 30000);
+// var gameStatus = setTimeout(() => {
+//   gameOver(correctAnswers, wrongAnswers, unansweredQuestions);
+// }, 0);
